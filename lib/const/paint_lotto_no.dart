@@ -25,8 +25,22 @@ class PaintLottoNo extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    var tempColor;
+
+    if (number >= 1 && number <= 10) {
+      tempColor = 0xFFFBC400;
+    } else if (number >= 11 && number <= 20) {
+      tempColor = 0xFF69C8F2;
+    } else if (number >= 21 && number <= 30) {
+      tempColor = 0xFFFF7272;
+    } else if (number >= 31 && number <= 40) {
+      tempColor = 0xFFAAAAAA;
+    } else if (number >= 41 && number <= 45) {
+      tempColor = 0xFFB0D840;
+    }
+
     final Paint circlePaint = Paint()
-      ..color = Colors.blue
+      ..color = Color(tempColor)
       ..style = PaintingStyle.fill;
 
     final Paint textPaint = Paint()

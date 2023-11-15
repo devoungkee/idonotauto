@@ -13,65 +13,80 @@ class _Make_AnswerState extends State<Make_Answer> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Align(
-        // alignment: Alignment.topCenter,
-        child: ListView(
-          children: [
-            Dismissible(
-              key: ObjectKey(0),
-              direction: DismissDirection.endToStart,
-              onDismissed: (DismissDirection direction) {
-              },
-              child: Column(
-                children: [
-                  Card(
-                    elevation: 10.0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(6.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: ListView(
+        children: [
+          Dismissible(
+            key: ObjectKey(0),
+            direction: DismissDirection.endToStart,
+            onDismissed: (DismissDirection direction) {
+            },
+            child: Card(
+              elevation: 10.0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(6.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      color: Colors.lightGreen ,
+                      child: Column(
                         children: [
-                          Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Paint_LottoNo(number: 26,),
-                                  Paint_LottoNo(number: 11,),
-                                  Paint_LottoNo(number: 22,),
-                                  // Container(
-                                  //   width:50.0,
-                                  //   height: 50.0,
-                                  //   child: Paint_LottoNo(number: 26,)
-                                  //   ),
-                                ],
-                              ),
-                              Text('1,2,3,4,5,6'),
-                              Text("I don't have a money"),
-                            ],
+                          Container(
+                            color: Colors.brown,
+                            child: Row(
+                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Paint_LottoNo(number: 2,),
+                                SizedBox(width: 5,),
+                                Paint_LottoNo(number: 14,),
+                                SizedBox(width: 5,),
+                                Paint_LottoNo(number: 22,),
+                                SizedBox(width: 5,),
+                                Paint_LottoNo(number: 32,),
+                                SizedBox(width: 5,),
+                                Paint_LottoNo(number: 42,),
+                                SizedBox(width: 5,),
+                                Paint_LottoNo(number: 44,),
+                              ],
+                            ),
                           ),
-                          SizedBox(width: 20,),
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child: Icon(Icons.delete_sweep,
-                              size: 45,
-                              color: Colors.lightGreen,
+
+                          SizedBox(height: 10),
+
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            color: Colors.lightGreen,
+                            child: Text("I don't  a money",
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                              overflow: TextOverflow.clip,
+
                             ),
                           ),
                         ],
                       ),
                     ),
-                  ),
-
-                ],
+                    SizedBox(width: 20,),
+                    Container(
+                      color: Colors.orange,
+                      alignment: Alignment.center,
+                      // alignment: Alignment.centerRight,
+                      child: Icon(Icons.delete_sweep,
+                        size: 45,
+                        color: Colors.lightGreen,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-
             ),
-          ],
-        ),
+
+          ),
+        ],
       ),
     );
   }
