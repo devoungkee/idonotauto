@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class Paint_LottoNo extends StatelessWidget {
   final int number;
 
+  //마지막 저장이다.
   Paint_LottoNo({required this.number});
-  // const Paint_LottoNo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +54,9 @@ class PaintLottoNo extends CustomPainter {
       ..color = Color(tempColor)
       ..style = PaintingStyle.fill;
 
-    final Paint textPaint = Paint()
-      ..color = Colors.white
-      ..style = PaintingStyle.fill;
+    // final Paint textPaint = Paint()
+    //   ..color = Colors.white
+    //   ..style = PaintingStyle.fill;
 
     final center = size.center(Offset.zero);
     final radius = size.width / 2;

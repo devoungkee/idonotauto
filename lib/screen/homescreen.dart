@@ -5,9 +5,9 @@ import 'package:idonotauto/screen/header.dart';
 import 'package:idonotauto/screen/input_answer.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  // HomeScreen({super.key});
 
-  List<String> tempListNum = [];
+  final List<String> tempListNum = [];
 
   @override
   Widget build(BuildContext context) {
@@ -41,24 +41,6 @@ class HomeScreen extends StatelessWidget {
                   child: Input_Answer(),
                 ),
               ),
-
-              // Flexible(
-              //   flex: 5,
-              //   child: Container(
-              //       color: Colors.yellow,
-              //     child: InputBox(),
-              //   ),
-              // ),
-              //
-              // wgseo_Sized_Heigh(),
-              //
-              // Flexible(
-              //   flex: 30,
-              //   child: Container(
-              //     color: Colors.blue,
-              //     child: Make_Answer(),
-              //   ),
-              // ),
 
               wgseo_Sized_Heigh(),
 
